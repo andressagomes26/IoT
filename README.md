@@ -7,8 +7,7 @@
   <a href="LICENSE" >
     <img alt="License" src="https://img.shields.io/badge/license-MIT-%23F8952D">
   </a>
-</p>
-
+    
 ## Internet of Things | NodeMCU ESP-12E | Protocolo MQTT
 
 Projetos desenvolvidos para prática de Internet of Things.
