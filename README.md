@@ -1,22 +1,19 @@
-<h1 align="center">
-    Internet of Things 
-</h1>
-
-<p align="center">
-    
-  <a href="LICENSE" >
-    <img alt="License" src="https://img.shields.io/badge/license-MIT-%23F8952D">
-  </a>
-    
-## Internet of Things | NodeMCU ESP-12E | Protocolo MQTT
+## Internet of Things | NodeMCU ESP-WROOM-32 | Protocolo MQTT
 
 Projetos desenvolvidos para prática de Internet of Things.
+
+## Dependências
+
+- NodeMCU ESP-WROOM-32;
+- Sensor LDR (Light Dependent  Resistor);
+- Sensor ultrassônico HC-SR04;
+- Arduino IDE 1.3.3;
 
 ## Sobre o projeto
 
 ### Projeto 01
 
-O projeto consiste em registrar na nuvem através do serviço do site ThingSpeak.com dados de temperatura e umidade coletado pelos sensores DHT11/DHT22. Para isso será utilizado o módulo NodeMCU, uma placa cujo objetivo é facilitar o desenvolvimento de aplicações para o módulo ESP8266 ESP-12. Trata-se de uma plataforma open source desenvolvido para projetos de Internet das Coisas. Dessa forma, a plataforma é composta por um chip controlador (ESP8266 ESP-12E), por um conversor USB serial integrado e possui WiFi nativo. 
+O projeto consiste em registrar na nuvem através do serviço do site ThingSpeak.com dados de distância e luminosidade coletados pelo sensor  ultrassônico HC-SR04 e pelo sensor LDR, respectivamente. Para isso será utilizou-se o NodeMCU ESP-WROOM-32, plataforma open source desenvolvida para projetos de Internet das Coisas. Outrossim, após a análise dos dados  captados  na  nuvem, utilizou-se o recurso Matlab Analysis para calcular a média dos dados obtidos.
 
 ### Projeto 02
 
