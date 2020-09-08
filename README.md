@@ -1,6 +1,6 @@
 ## Internet of Things | NodeMCU ESP-WROOM-32 | Protocolo MQTT
 
-Projetos desenvolvidos para prática de Internet of Things.
+Projetos desenvolvidos para prática de Internet das Coisas (IoT).
 
 ## Dependências
 
