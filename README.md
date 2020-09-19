@@ -9,7 +9,7 @@ Projetos desenvolvidos para prática de Internet das Coisas (IoT).
 - NodeMCU ESP-WROOM-32;
 - Sensor LDR (Light Dependent  Resistor);
 - Sensor ultrassônico HC-SR04;
-- Arduino IDE 1.3.3;
+- Arduino IDE 1.3.3.
 
 ## Sobre o projeto
 
