@@ -1,40 +1,22 @@
- /*////////////////////////////////////////////////////////////////////////////////////////////////////
- *                                                                                                   /
- * Este programa mostra como fazer uma aplicacao usando lingugem mqtt para ligar e desligar leds     /
- * Usando um ESP8266-12E                                                                             /
- * Foi utilizado o site IoT https://www.cloudmqtt.com/                                               /
- * O tutorial deste e de outras aplicações didaticas estão disponiveis no meu website                /
- * ///////////////////////////////////////////////////////////////////////////////////////////////////
- * 
- * //////////////////////////////////////////////////////////////////////////
- * Prática baseada no código disponível em www.carloskwiek.com.br        ////
- * ////////////////////////////////////////////////////////////////////////*/
- 
-
-
 #include <WiFi.h>
 #include <PubSubClient.h> // Biblioteca usada, baixe e instale se não a tiver, link abaixo
                           //https://github.com/knolleary/pubsubclient/blob/master/examples/mqtt_esp8266/mqtt_esp8266.ino
  
 const char* ssid = "ProRat"; //Aqui o nome da sua rede local wi fi
-const char* password =  "44668822"; // Aqui a senha da sua rede local wi fi
+const char* password =  "********"; // Aqui a senha da sua rede local wi fi
 const char* mqttServer = "tailor.cloudmqtt.com"; // Aqui o endereço do seu servidor fornecido pelo site 
 const int mqttPort = 16946; // Aqui mude para sua porta fornecida pelo site
 const char* mqttUser = "jemqcgkq"; //  Aqui o nome de usuario fornecido pelo site
 const char* mqttPassword = "DlPgV0Ehxagw"; //  Aqui sua senha fornecida pelo site
-//char EstadoSaida = '0';  
 WiFiClient espClient;
 PubSubClient client(espClient);
 
-
 void mqtt_callback(char* topic, byte* payload, unsigned int length);
-
 
 void setup() {
 
     pinMode(5, OUTPUT);
-  
- 
+   
   Serial.begin(115200);
  
   WiFi.begin(ssid, password);
@@ -97,16 +79,7 @@ void callback(char* topic, byte* payload, unsigned int length) {
        digitalWrite(5,LOW); 
        delay(500); 
     }
-        
-    //toma ação dependendo da string recebida:
-    //verifica se deve colocar nivel alto de tensão na saída.
-    //IMPORTANTE: o Led já contido na placa é acionado com lógica invertida (ou seja,
-    //enviar HIGH para o output faz o Led apagar / enviar LOW faz o Led acender)
- 
- 
-    //verifica se deve colocar nivel alto de tensão na saída se enviar L e digito, ou nivel baixo se enviar D e digito no topíco LED
-
-    
+          
   Serial.println();
   Serial.println("-----------------------------");
  
