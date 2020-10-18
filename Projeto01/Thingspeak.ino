@@ -1,18 +1,12 @@
 #include <Ultrasonic.h>
-
-
 #include <ThingSpeak.h>
-
 #include <WiFi.h>
-
-
 
 String apiKey = "FFM2753WQJGHY7BU";     //  <-- seu Write API key do site ThingSpeak
 
 const char *ssid =  "ProRat";     // <-- substitua com o ssid e senha da rede Wifi
 const char *pass =  "44668822";
 const char* server = "api.thingspeak.com";
-
 
 #define PIN_TRIGGER   4
 #define PIN_ECHO      5
@@ -23,9 +17,6 @@ const char* server = "api.thingspeak.com";
 //Inicializa o sensor nos pinos definidos acima
 Ultrasonic ultrasonic(PIN_TRIGGER, PIN_ECHO);
 
-
-
-
 WiFiClient client;
  
 void setup() 
@@ -33,11 +24,9 @@ void setup()
        Serial.begin(115200);
        delay(10);
 
-       
        pinMode(INPUT,12);
        Serial.println("Connecting to ");
-       Serial.println(ssid);
- 
+       Serial.println(ssid); 
  
        WiFi.begin(ssid, pass);
        ThingSpeak.begin(client);
@@ -68,7 +57,6 @@ void loop()
     Serial.println("Problem updating channel. HTTP error code " + String(x));
    }
      
-   
    Serial.print("Distancia: ");
    Serial.println(distancia);
    Serial.print("LDR: ");
